@@ -1,6 +1,6 @@
 import Button from "../components/Button";
 import { arrowRight } from "../assets/icons";
-import { shoes,statistics } from "../constants";
+import { shoes, statistics } from "../constants";
 import ShoeCard from "../components/ShoeCard";
 import { bigShoe1 } from "../assets/images";
 import { useState } from "react";
@@ -20,8 +20,8 @@ const Hero = () => {
           <span className="x1:bg-white x1:whitespace-nowrap relative z-10 pr-10">The New Arrival</span>
           <br />
           <span className="text-coral-red inline-block mt-3">Nike </span> Shoes
-        </h1> 
-        <p className="font-montserrat text-slate-gray text-lg  leading-8 mt-6 mb-14 sm:max-w-sm">
+        </h1>
+        <p className="font-montserrat text-slate-gray text-lg leading-8 mt-6 mb-14 sm:max-w-sm">
           Discover stylish Nike arrivals, quality comfort, and innovation for
           your active life.
         </p>
@@ -45,20 +45,20 @@ const Hero = () => {
           className='object-contain relative z-10'
         />
 
-      <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6'>
-      {shoes.map((image, index) => (
+        <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6'>
+          {shoes.map((image, index) => (
             <div key={index}>
               <ShoeCard
                 index={index}
                 imgURL={image}
                 changeBigShoeImage={(shoe) => setBigShoeImg(shoe)}
                 bigShoeImg={bigShoeImg}
-               />
+              />
             </div>
           ))}
         </div>
       </div>
-      </section>
+    </section>
   );
 };
 
